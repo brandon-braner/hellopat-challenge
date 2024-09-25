@@ -4,4 +4,4 @@ class ProductRecommendationRequest(BaseModel):
     user_input: str
 
 class ProductRecommendationResponse(BaseModel):
-   recommendation: str
+    recommendation: str

@@ -1,5 +1,4 @@
 from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
 
 from hellopatient.chat.models import ProductRecommendationRequest, ProductRecommendationResponse
 
