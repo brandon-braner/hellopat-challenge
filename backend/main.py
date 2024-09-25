@@ -6,10 +6,13 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from db_engine import engine
 from models import User
 
+from hellopatient.chat.router import router as product_recommendation_router
+
 seed_user_if_needed()
 
 app = FastAPI()
 
+app.include_router(product_recommendation_router)
 
 class UserRead(BaseModel):
     id: int
