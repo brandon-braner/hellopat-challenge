@@ -12,7 +12,7 @@ sqlalchemy = "2.0.35"
 asyncpg = "*"
 greenlet = "*"
 uvicorn = "*"
-psycopg = {extras = ["binary"], version = "^3.2.2"}
+psycopg2-binary = "^2.9.9"
 
 
 [build-system]
