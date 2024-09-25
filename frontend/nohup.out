@@ -1,0 +1,11 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.13
+  - Local:        http://localhost:3000
+  - Environments: .env.development
+
+ ✓ Starting...
+ ✓ Ready in 885ms
+[?25h
