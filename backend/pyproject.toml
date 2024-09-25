@@ -15,6 +15,7 @@ uvicorn = "*"
 psycopg2-binary = "^2.9.9"
 langchain = "^0.3.1"
 langchain-openai = "^0.2.0"
+pydantic-settings = "^2.5.2"
 
 
 [build-system]
