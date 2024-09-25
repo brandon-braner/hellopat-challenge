@@ -440,7 +440,9 @@ disable=raw-checker-failed,
         use-implicit-booleaness-not-comparison-to-string,
         use-implicit-booleaness-not-comparison-to-zero,
         missing-class-docstring,
-        missing-function-docstring
+        missing-function-docstring,
+        missing-module-docstring,
+        unrecognized-option
 
 
 # Enable the message, report, category or checker with the given id(s). You can
