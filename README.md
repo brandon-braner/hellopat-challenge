@@ -15,6 +15,7 @@
 
 ### Running the Application
 
+
 1. From the root directory, run `docker compose up`.
 2. In a separate terminal, `cd` into `backend` and run `poetry run uvicorn main:app --reload`.
 3. In a separate terminal, `cd` into `frontend` and run `npm run dev`.
