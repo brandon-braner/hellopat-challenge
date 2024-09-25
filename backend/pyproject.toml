@@ -6,13 +6,13 @@ authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">3.7"
+python = ">3.12,<3.13"
 fastapi = "*"
-sqlalchemy = "*"
+sqlalchemy = "2.0.35"
 asyncpg = "*"
 greenlet = "*"
-psycopg2 = "*"
 uvicorn = "*"
+psycopg = {extras = ["binary"], version = "^3.2.2"}
 
 
 [build-system]
