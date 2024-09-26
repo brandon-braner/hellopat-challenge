@@ -20,7 +20,10 @@ class Settings(BaseSettings):
     pg_host: str = os.environ.get("HELLO_PATIENT_PG_HOST", "localhost")
     pg_port: int = os.environ.get("HELLO_PATIENT_PG_PORT", 5432)
     pg_database: str = os.environ.get("HELLO_PATIENT_PG_DATABASE", "postgres")
-
+    
+    llm: str = os.environ.get("HELLO_PATIENT_LLM", "")
+    llm_model: str = os.environ.get("HELLO_PATIENT_LLM_MODEL", "")
+    openai_api_key: str = os.environ.get("OPENAI_API_KEY", "")
 
 
 
