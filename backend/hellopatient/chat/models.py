@@ -1,9 +1,14 @@
-from pydantic import BaseModel
+from sqlalchemy import Column, Integer, Text
+from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.ext.asyncio import AsyncSession
+Base = declarative_base()
 
-class ProductRecommendationRequest(BaseModel):
-    user_input: str
-    session_id: str
+class MessageStore(Base):
+    __tablename__ = 'message_store'
 
-class ProductRecommendationResponse(BaseModel):
-    recommendation: str
-    session_id: str
+    id = Column(Integer, primary_key=True)
+    session_id = Column(Text, nullable=False)
+    message = Column(Text, nullable=False)
+
+

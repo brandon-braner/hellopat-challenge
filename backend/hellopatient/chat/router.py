@@ -1,7 +1,8 @@
 from fastapi import APIRouter, HTTPException
 
-from hellopatient.chat.models import ProductRecommendationRequest, ProductRecommendationResponse
+from hellopatient.chat.schmea import ProductRecommendationRequest, ProductRecommendationResponse
 from hellopatient.chat.service import ProductRecommendationService
+from hellopatient.chat.chat_history_service import ChatHistoryService
 
 router = APIRouter(prefix='/chat')
 
@@ -15,6 +16,11 @@ async def product_recommendation_chat(request: ProductRecommendationRequest) -> 
     )
 
     return ProductRecommendationResponse(
-        recommendation=recommendation,
+        response=recommendation,
         session_id=request.session_id
     )
+
+@router.get("/get_chat_history/{session_id}")
+async def get_chat_history(session_id: str):
+   service = ChatHistoryService()
+   return await service.get_chat_history(session_id)

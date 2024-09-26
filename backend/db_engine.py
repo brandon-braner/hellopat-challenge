@@ -7,6 +7,7 @@ from hellopatient.config import get_settings
 
 settings = get_settings()
 
+# TODO move all this to settings when we move the user stuff into its own module
 _main_uri = (
     f"{settings.pg_username}:{settings.pg_password}@"
     f"{settings.pg_host}:{settings.pg_port}/{settings.pg_database}"
