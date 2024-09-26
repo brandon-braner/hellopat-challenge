@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { json } from 'stream/consumers';
 import { v4 as uuidv4 } from 'uuid';
 
 type Message = {
@@ -48,17 +47,13 @@ export default function Home() {
      fetch(`${apiUrl}/chat/get_chat_history/${storedSessionId}`)
      .then((res) => res.json())
      .then((data) => {
-        console.log(data[0])
-
         data.forEach((item: any) => {
-          let messageArray = JSON.parse(item['message']);
-          console.log(messageArray)
-          let message: Message = {
+          const messageArray = JSON.parse(item['message']);
+          const message: Message = {
             role: messageArray['type'] === 'human' ? 'user' : 'assistant',
             content: messageArray['data']['content']
           }
           setMessages((prevMessages) => [...prevMessages, message]);
-
         });
      })
      .catch((error: any) => {
